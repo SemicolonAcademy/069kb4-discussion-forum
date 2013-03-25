@@ -1,0 +1,402 @@
+@charset "utf-8";
+/* CSS Document */
+body,ul,li,h1,h2,h3,h4,h5,ol,a{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color:#333333333;
+	background: url(../images/repeator.png) repeat-x;
+}
+	
+a
+{
+	color:#0471e1;
+	font-weight:bold;
+	text-decoration:none;
+}
+a:hover
+{
+	text-decoration:underline;
+}
+h3{
+	padding: 13px 0;
+	}
+
+h3 a:link, h3 a:visited{
+	text-decoration: none;
+	color: #0099CC;
+	}
+h3 a:hover{
+	color: #F60;
+	}
+#loginform, #loginform2
+{
+	border-top:1px dashed #999999;
+	padding-top:20px;
+	float:left;
+	font-size:13px;
+}
+#loginform2 input
+{
+	width:220px;
+	border:1px solid #cccccc;
+	padding:3px;
+	font-size:13px;
+	height:17px;
+
+}
+.line
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#333333;
+}
+#loginform input
+{
+	width:320px;
+	border:1px solid #cccccc;
+	padding:3px;
+	color:#333333;
+	font-size:13px;
+	font-weight:bold;
+}
+#loginform input:focus, #loginform2 input:focus
+{
+	border:1px solid #0e8fc3;
+	box-shadow:0px 0px 5px #0e8fc3;
+}
+#loginform label
+{
+	float:right;
+	padding-right:5px;
+}
+#loginform .button, #loginform2 .button
+{
+	background:#0471e1;
+	border-radius:5px;
+	border:1px solid #0471e1;
+	width:100px;
+	cursor:pointer;
+	font-weight:normal;
+	height:30px;
+	color:#ffffff;
+}
+.error
+{
+	color:#ff0000;
+	font-size:12px;
+	font-weight:bold;
+}
+#loginform .button:hover, #loginform2 .button:hover
+{
+	background:#005aa6;
+}
+#loginform .short
+{
+	width:99px;
+}
+textarea.huge{
+	width: 544px;
+	height: 220px;
+	}	
+.red{
+	color: #ff0000;
+	}	
+
+.wrapper{
+	margin: 0 auto;
+	width: 823px;
+	}	
+.logo{
+	margin-top: 40px;
+	width: 100%;
+	height: 39px;
+	padding-bottom: 4px;
+	float:left;
+	}	
+.logo a.guestbook_logo{
+	background: url(../images/logo.png) no-repeat;
+	width: 384px;
+	height: 72px;
+	float:left;
+	outline: none;
+	}
+.search{
+	width: 300px;
+	float:right;
+	margin-top: 13px;
+	position: relative;
+	}
+.search input{
+	color: #999999;
+	}	
+.search input:active,.search input:focus{
+	color: #444444;
+    }	
+.search input.button{
+	color: #333333333;
+	padding: 2px 13px;
+	}
+.navigation{
+	width: 100%;
+	float:left;
+	}
+.navigation ul{
+	margin-top: 30px;
+	}
+.navigation ul li{
+	display: inline;
+	position: relative;
+	float:left;
+	}
+.navigation ul li img{
+	float: left;
+	}	
+.navigation ul li a:link,.navigation ul li a:visited{
+	color: #666666;
+	text-decoration: none;
+	display: block;
+	float:left;
+	height: 53px;
+	text-transform:uppercase;
+	line-height: 53px;
+	padding: 0 31px;
+	font-family: Arial, Helvetica, sans-serif, Geneva, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	}
+.navigation ul li a.active{
+	background: url(../images/navi_hover.png) top center no-repeat;
+	color: #0471e1;
+	}
+.navigation ul li a:hover{
+	color: #0471e1;
+	}
+	
+/*------------------Dropdown starts-----------------------*/
+
+ul.topnav li span.subhover {background-position: center bottom; cursor: pointer;} /*--Hover effect for trigger--*/
+ul.topnav li ul.subnav {
+	position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/
+	left: -1px; 
+	top: 33px;
+	margin: 0; 
+	padding: 0;
+	display: none;
+	float: left;
+	width: 222px;
+}
+ul.topnav li ul.subnav li{
+	background: url(../images/dropnavi_mid.jpg) repeat-y;
+	margin: 0; 
+	padding: 0;
+	display: block;
+}
+ul.topnav li ul.subnav li.top_drop{
+	background: url(../images/dropnavi_top.jpg) no-repeat;
+	width: 222px;
+	height: 24px;
+	}
+ul.topnav li ul.subnav li.bottom_drop{
+	background: url(../images/dropnavi_bottom.jpg) no-repeat;
+	width: 222px;
+	height: 24px;
+	}	
+html ul.topnav li ul.subnav li a {
+	display: block;
+	padding: 0px;
+	padding-left: 10px;
+	line-height: 31px;
+	height: 31px;
+	font-weight: normal;
+	font-variant: normal;
+	width: 210px;
+	color:#333333;
+	font-weight: bold;
+	
+	border-top: 1px solid #ffffff;
+	border-bottom: 1px solid #ccc;
+	margin: 0 1px;
+}
+html ul.topnav li ul.subnav li a:hover{
+	color: #0471e1;
+	background:#eeeeee;
+}
+
+/*------------------------------Dropdown ends-----------------------------*/
+
+/*-----------------------Content starts-----------------*/	
+.content{
+	width: 100%;
+	height:400px;
+	margin-top: 40px;
+	float:left;
+	}
+.content h1{
+	color: #a5aeb9;
+	font-family:Arial, Helvetica, sans-serif;
+	}	
+.messages_contain h2{
+	color:#2F96CB;
+	text-align: center;
+	padding-bottom: 10px;
+	border-bottom: 4px solid #ccc;
+	}
+.messages_contain hr{
+	margin-top: 0;
+	}
+.adv_search{
+	width: 100%;
+    float: left;
+	padding-bottom: 22px;
+	margin-bottom: 40px;
+	border-bottom: 2px double #444;
+	}
+.adv_search input{
+	color: #999;
+	}	
+.adv_search input:active,.adv_search input:focus{
+	color: #444;
+    }
+.adv_search input.button{
+	color: #333333;
+	padding: 2px 13px;
+	}	
+.search_results{
+	margin-top: 22px;
+	}	
+.content a.gotoguestbook{
+	background: url(../images/gotoguestbook.png) no-repeat;
+	display: block;
+	width: 554px;
+	height: 224px;
+	float:left;
+	text-indent: -9999px;
+	}
+.interests{
+	width: 100%;
+	float: left;
+	margin-bottom: 22px;
+	}	
+.interests ul{
+	list-style: none;
+	}
+.interests ul li{
+	display: inline;
+	}
+.interests ul li a:link,.interests ul li a:visited{
+	height: 154px;
+	width: 202px;
+	margin-top:20px;
+	float: left;
+	}
+.interests ul li a:hover
+{
+	opacity:0.8;
+}
+.interests h3{
+	color: #04519e;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 19px;
+	font-weight: normal;
+	border-bottom: 1px dashed #333333;
+	}
+ul.friend_requests{
+	float: left;
+	width: 100%;
+	margin-top: 22px;
+	}
+ul.friend_requests li{
+	padding: 7px 0;
+	border-bottom: 1px dotted #ccc;
+	margin-top: 1px;
+	width: 100%;
+	float:left;
+	list-style: none;
+	}
+ul.friend_requests li a:link,ul.friend_requests li a:visited{
+	float: none;
+	}
+ul.friend_requests li h3{
+	color: #069;
+	background: #ddd;
+	padding: 3px 0 3px 13px;
+	font-size: 17px;
+	}
+ul.friend_requests li h4{
+	color: #09C;
+	background: #ddd;
+	padding: 3px 0 3px 13px;
+	font-size: 13px;
+	}	
+ul.friend_requests li h3 span.started{
+	font-weight: normal;
+	color: #F60;
+	font-size: 12px;
+	padding-left: 13px;
+	}
+ul.friend_requests li h5{
+	font-weight: normal;
+	color: #F60;
+	font-size: 12px;
+	padding-left: 13px;
+	}
+.dis_message{
+	padding: 13px;
+	background: #f1f1f1;
+	
+	}	
+/*-----------------------Discussion  starts-----------------*/
+.discus_topics{
+	width: 100%;
+	float:left;
+	margin-top: 3px;
+	}
+.discus_topics th,.discus_topics td{
+	border: 1px dotted #333333;
+	padding: 5px 13px;
+	}	
+/*-----------------------footer starts-----------------*/		
+.footer
+{
+	border-top:3px solid #cccccc;
+	float:left;
+	width:100%;
+	height:100px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
