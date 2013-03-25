@@ -16,7 +16,7 @@
   </tr>
   
   <tr height="22">
-    <td></td><td>Not Registered Yet? <a href="register.php">Register Now</a></td>
+    <td></td><td>Not Registered Yet? <a href="?page=register">Register Now</a></td>
   </tr>
   <tr>
       <td></td>
