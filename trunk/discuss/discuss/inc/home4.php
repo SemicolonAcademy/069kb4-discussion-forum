@@ -11,11 +11,11 @@ $row=mysql_fetch_array($message);
 <ul class="friend_requests">
 
 <?php
-$startedby=$row[startedby];
-$topic=$row[topic];
-$message=$row[message];
-$count=$row[replies];
-$tid=$row[tid];
+$startedby=$row['startedby'];
+$topic=$row['topic'];
+$message=$row['message'];
+$count=$row['replies'];
+$tid=$row['tid'];
 
 
 echo "<li><h3>".$topic."<span class='started'>(Started by - ".$startedby.")</span></h3><div class='dis_message'>".$message."</div></li>";

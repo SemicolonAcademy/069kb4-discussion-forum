@@ -9,12 +9,12 @@ $topic=$_POST['topic'];
 $message=$_POST['message'];
 echo "<h1>$category</h1>";
 mysql_query("insert into tbl_topics (startedby,topic,message,replies,category) values('$startedby','$topic','$message','0','$category')",$con) or die("Sorry, Message cannot be posted");
-echo "<p class='red'>Message has been Posted</a> <br><br>";
+echo "<p class='green'>Message has been Posted</a> <br><br>";
 
 
 $qry=mysql_query("select * from tbl_topics where startedby='$startedby' and topic='$topic'",$con);
 $rec=mysql_fetch_array($qry);
-$topic=$rec[tid];
+$topic=$rec['tid'];
 ?>
 
  <h3><a href="index.php?page=home&id=<?php echo $uid; ?>">Discuss Home</a> &gt; <?php echo $category=$_GET['cat']; ?></h3>

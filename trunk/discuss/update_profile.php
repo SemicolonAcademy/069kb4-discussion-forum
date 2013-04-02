@@ -8,17 +8,19 @@ include("inc/navigation.php");
 ?>
     <div class="content">
         <?php
-		$name=$_POST['name'];
+		$fname=$_POST['fname'];
+		$mname=$_POST['mname'];
+		$lname=$_POST['lname'];
 		$country=$_POST['country'];
-		$age=$_POST['age'];
 		$phone=$_POST['phone'];
-		$intrests=$_POST['interests'];
-		$biography=$_POST['biography'];
+		$email=$_POST['email'];
+		$password=$_POST['password'];
+		
 		
 	$con=mysql_connect("localhost","root","") or die("Couldnot establish connection with database server");
     mysql_select_db("db_discuss",$con);
 	
-	mysql_query("update tbl_discuss set name='$name',country='$country',age='$age',phone='$phone',intrests='$intrests',biography='$biography' where uid='$uid'",$con);
+	mysql_query("update tbl_discuss set fname='$fname', mname='$mname', lname='$lname', country='$country',phone='$phone', password='$password' where uid='$uid'",$con);
     
 	$display_query=mysql_query("select * from tbl_discuss where uid='$uid'",$con);
 ?>
@@ -35,49 +37,31 @@ include("inc/navigation.php");
 <table width="500" border="0" cellspacing="3" cellpadding="3">
  <tr>
     <th>Username:</th>
-    <td><strong> <?php echo $row[username]; ?> </strong></td>
+    <td><strong> <?php echo $row['username']; ?> </strong></td>
   </tr>
  <tr>
-    <th>Name:</th>
-    <td><input type="text" name="name" value="<?php echo $row[name]; ?>" /></td>
+    <th>First Name:</th>
+    <td><input type="text" name="name" value="<?php echo $row['fname']; ?>" /></td>
+  </tr>
+  
+  <tr>
+    <th>Last name:</th>
+    <td><input type="text" name="age" value="<?php echo $row['lname']; ?>" /></td>
   </tr>
   <tr>
     <th>Country:</th>
-    <td><input type="text" name="country" value="<?php echo $row[country]; ?>" /></td>
+    <td><input type="text" name="country" value="<?php echo $row['country']; ?>" /></td>
   </tr>
-  <tr>
-    <th>Age:</th>
-    <td><input type="text" name="age" value="<?php echo $row[age]; ?>" /></td>
-  </tr>
-  <tr>
-    <th>Gender:</th>
-    <td>
-    <strong>
-	<?php 
-	if($row[gender]=='m')
-	  echo 'male'; 
-	else
-	    echo 'female';
-	?>
-    </strong>
-    </td>
-  </tr>
-  <tr>
-    <th>Phone:</th>
-    <td><input type="text" name="phone" value="<?php echo $row[phone]; ?>" /></td>
-  </tr>
+  
   <tr>
     <th>Email:</th>
-    <td><strong> <?php echo $row[email]; ?> </strong></td>
-  </tr>
-   <tr>
-    <th>Interests:</thd>
-    <td><textarea name="interests"><?php echo $row[intrests]; ?> </textarea></td>
+    <td><input type="text" name="country" value="<?php echo $row['email']; ?>" /></td>
   </tr>
   <tr>
-    <th>Biography:</th>
-    <td><textarea name="biography"><?php echo $row[biography]; ?> </textarea></td>
+    <th>Password:</th>
+    <td><strong> <?php echo $row['password']; ?> </strong></td>
   </tr>
+   
   <tr height="22">
     <td>&nbsp;</td>
     <td>&nbsp;</td>

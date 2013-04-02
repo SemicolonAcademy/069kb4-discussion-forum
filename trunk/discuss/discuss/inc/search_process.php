@@ -22,11 +22,8 @@ if(!$row=mysql_fetch_array($display_query)){
 else{
 	do{
   echo "<hr size=1 color='#dddddd'><br>";
-  echo "<strong>Name</strong> = ".$row['fname']. "&nbsp;" .$row['mname']. "&nbsp;" .$row['lname']. "<br/>
-  <strong>Email</strong> = ".$row['email']."<br/>
-  <strong>Username</strong> = ".$row['username']."<br/>
-  <strong>Country</strong> = ".$row['country']."<br/>";
-  
+  echo "<strong>Name</strong> = ".$row['fname']. "&nbsp;" .$row['mname']. "&nbsp;" .$row['lname']. "<br/><strong>Email</strong> = ".$row['email']."<br/><strong>Username</strong> = ".$row['username'];
+  echo "<br/>";
 }while($row=mysql_fetch_array($display_query));
 mysql_close($con);
 }	

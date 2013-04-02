@@ -24,11 +24,11 @@ if($row=mysql_fetch_array($request_sent)){
     mysql_close($con);
 	echo 'The Friend request has already been sent.';
 }
-elseif($to==$from){
+else if($to==$from){
     mysql_close($con);
 	echo 'You cannot send friend request to yourself.';
 }
-elseif($row=mysql_fetch_array($already_friend)){
+else if($row=mysql_fetch_array($already_friend)){
     mysql_close($con);
 	echo 'You are already friends.';
 }

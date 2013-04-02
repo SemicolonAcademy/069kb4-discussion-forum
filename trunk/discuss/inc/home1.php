@@ -21,9 +21,9 @@
   while($row=mysql_fetch_array($qry_select)){
 	  ?>
   <tr>
-    <td width="25%"><?php echo $row[startedby]; ?></td>
-    <td width="55%"><a href="index.php?page=home&cat=<?php echo $category.'&topic='.$row[tid].'&num=4&id='.$uid; ?>"><strong><?php echo $row[topic]; ?></strong></a></td>
-    <td width="20%"><?php echo $row[replies]; ?></th>
+    <td width="25%"><?php echo $row['startedby']; ?></td>
+    <td width="55%"><a href="index.php?page=home&cat=<?php echo $category.'&topic='.$row['tid'].'&num=4&id='.$uid; ?>"><strong><?php echo $row['topic']; ?></strong></a></td>
+    <td width="20%"><?php echo $row['replies']; ?></th>
   </tr>
   
   <?php 

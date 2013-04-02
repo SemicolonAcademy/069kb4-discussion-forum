@@ -16,10 +16,10 @@ $email=$_POST['email'];
 $username=$_POST['username'];
 $password=$_POST['password'];
 
-
 $con=mysql_connect("localhost","root","");
 mysql_select_db("db_discuss",$con);
 $display_query=mysql_query("select * from tbl_discuss where username='$username'",$con);
+
 if($row=mysql_fetch_array($display_query)){
 	mysql_close($con); 
     echo '<span class=error>The username is already in use. Please Try different Username.</span>';
