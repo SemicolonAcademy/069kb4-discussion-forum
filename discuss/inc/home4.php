@@ -1,6 +1,9 @@
 <?php
+$startedby=$_POST['startedby'];
+
 $con=mysql_connect("localhost","root","") or die("Couldnot establish connection with database server");
 mysql_select_db("db_discuss",$con);
+
 
 $topic=$_GET['topic'];
 $category=$_GET['cat'];
@@ -11,11 +14,6 @@ $row=mysql_fetch_array($message);
 <ul class="friend_requests">
 
 <?php
-$startedby=$row[startedby];
-$topic=$row[topic];
-$message=$row[message];
-$count=$row[replies];
-$tid=$row[tid];
 
 
 echo "<li><h3>".$topic."<span class='started'>(Started by - ".$startedby.")</span></h3><div class='dis_message'>".$message."</div></li>";

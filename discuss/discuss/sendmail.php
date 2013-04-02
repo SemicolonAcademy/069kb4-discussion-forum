@@ -15,7 +15,7 @@ include("inc/navigation.php");
 		
 		$display_query=mysql_query("select * from tbl_discuss where uid='$uid'",$con) or die('name not found');
 		while($row=mysql_fetch_array($display_query)){
-			$from=$row[name];
+			$from=$row['fname'];
 			}
 		mysql_query("insert into tbl_mailbox(mail_from,mail_to,messages) values('$from','$friend','$message')",$con) or die("Sorry");
 		echo "<p class='red'>Message successfully sent.</p>";
